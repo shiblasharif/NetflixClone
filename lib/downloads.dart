@@ -147,11 +147,11 @@ class _DownloadsState extends State<Downloads> {
                             // bottom: 10,
                             // left: 180,
                             child: RotationTransition(
-                              turns: const AlwaysStoppedAnimation(10 / 360),
+                              turns: const AlwaysStoppedAnimation(13 / 360),
                               child: Container(
                                 height: 205,
                                 width: 140,
-                                margin: EdgeInsets.only(left: 130, bottom: 25),
+                                margin: EdgeInsets.only(left: 150, bottom: 25),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   image: DecorationImage(

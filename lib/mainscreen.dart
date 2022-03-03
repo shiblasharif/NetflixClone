@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/model/model.dart';
 import 'package:netflix_clone/widgets/popular.dart';
@@ -115,7 +117,7 @@ class _MainScreenState extends State<MainScreen> {
                                                             FontWeight.w600),
                                                   ),
                                             const SizedBox(
-                                              height: 10,
+                                              height: 20,
                                             ),
                                           ],
                                         );

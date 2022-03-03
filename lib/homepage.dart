@@ -3,6 +3,7 @@ import 'package:netflix_clone/downloads.dart';
 
 import 'package:netflix_clone/fastlaughs.dart';
 import 'package:netflix_clone/mainscreen.dart';
+import 'package:netflix_clone/search.dart';
 import 'package:netflix_clone/upcoming.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,13 +15,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int selectedIndex = 0;
-  switchScreen(int index) {
-    setState(
-      () {
-        selectedIndex = index;
-      },
-    );
-  }
+  // switchScreen(int index) {
+  //   setState(
+  //     () {
+  //       selectedIndex = index;
+  //     },
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +29,7 @@ class _HomePageState extends State<HomePage> {
       const MainScreen(),
       const UpcomingScreen(),
       const FastLaughs(),
+      const Search(),
       const Downloads(),
     ];
     return Scaffold(
@@ -54,12 +56,21 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.emoji_emotions_rounded),
           ),
           BottomNavigationBarItem(
+              label: "Search",
+              icon: Icon(
+                Icons.arrow_circle_down,
+              )),
+          BottomNavigationBarItem(
               label: "Downloads",
               icon: Icon(
                 Icons.arrow_circle_down,
               )),
         ],
-        onTap: switchScreen,
+        onTap: (newIndex) {
+          setState(() {
+            selectedIndex = newIndex;
+          });
+        },
         currentIndex: selectedIndex,
       ),
     );
